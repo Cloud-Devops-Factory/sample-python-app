@@ -7,7 +7,7 @@ This repo contains a sample application to deploy to Kubernetes. The application
 ```bash
 $ docker build -f Dockerfile -t hello-python:latest .
 
-$ docker run -it -p 5001:5001 --name hello_python hello-python:latest
+$ docker run -it -p 8080:8080 --name hello_python hello-python:latest
 
 # Docker Docs: https://docs.docker.com/
 # Docker Reference: https://docs.docker.com/reference/
@@ -47,16 +47,16 @@ $ cd <project dir>
 $ pip install -r requirements.txt
 
 # Run the application
-$ PORT=5001 python src/app.py
+$ PORT=8080 python src/app.py
 
 # Check application
-$ curl http://localhost:5001/debug
+$ curl http://localhost:8080/debug
 # (or)
-# In Browser visit -> http://localhost:5001/debug/ui
+# In Browser visit -> http://localhost:8080/debug/ui
 ```
 
 ## Sample output
 
-Pointing your browser to <http://localhost:5001/debug/ui> will bring up the following:
+Pointing your browser to <http://localhost:8080/debug/ui> will bring up the following:
 
 ![](images/output.png)

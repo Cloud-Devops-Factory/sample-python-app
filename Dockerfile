@@ -17,5 +17,5 @@ RUN pip3 list --format=columns
 
 USER 1001
 
-# EXPOSE 5001
+EXPOSE 8080
 ENTRYPOINT ["python3", "/app/src/app.py"]

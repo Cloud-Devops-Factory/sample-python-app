@@ -10,7 +10,7 @@ services:
     container_name: hello_python
     restart: "no"
     ports:
-      - "5001:5001"
+      - "8080:8080"
     env_file:
       - .env.example
 
@@ -25,7 +25,7 @@ services:
     working_dir: "/app_devl/" # set working dir to source code vol mount point
     entrypoint: ["python3", "src/app.py"]
     ports:
-      - "5001:5001"
+      - "8080:8080"
     volumes:
       - "$PWD:/app_devl/:ro" # mount src code so that we don't have to build container every time during development
     env_file:
